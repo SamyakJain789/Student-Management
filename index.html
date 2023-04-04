@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management CRUD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Management CRUD</h1>
+      <div class="input-container">
+        <input type="text" placeholder="NAME" id="name" />
+        <input
+          type="email"
+          placeholder="EMAIL"
+          id="email"
+          name="email"
+          required
+        />
+        <input type="number" placeholder="GPA" id="grade" />
+        <input type="number" placeholder="AGE" id="age" />
+        <input type="text" placeholder="DEGREE" id="degree" />
+      </div>
+
+      <div class="button">
+        <button type="submit" id="submit" onclick="addStudent()">
+          ADD STUDENT
+        </button>
+      </div>
+
+      <input
+        class="search"
+        type="text"
+        id="search"
+        onkeyup="search()"
+        placeholder="Search By NAME, EMAIL or DEGREE"
+      />
+
+      <table class="table" id="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>STUDENT NAME</th>
+            <th>EMAIL</th>
+            <th>AGE</th>
+            <th>GPA</th>
+            <th>DEGREE</th>
+          </tr>
+        </thead>
+
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
